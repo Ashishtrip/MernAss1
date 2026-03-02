@@ -1,0 +1,178 @@
+/* 
+   Base
+    */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    line-height: 1.6;
+}
+h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 
+   Header
+   */
+.hdr {
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+}
+.hdr .name { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+.hdr .tag { font-size: 1.1rem; opacity: 0.9; }
+/* 
+   Navigation
+    */
+.nav {
+    background: #16213e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-lst {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+}
+.nav-lst a {
+    display: block;
+    padding: 18px 0;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* 
+   Hero Section
+    */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 50px 0;
+}
+.hero h2 { font-size: 2.2rem; margin-bottom: 20px; text-align: center; }
+.hoby-desc { font-size: 1.05rem; max-width: 750px; margin: 0 auto 25px; text-align: center; }
+.ben-lst { max-width: 650px; margin: 0 auto; padding-left: 20px; }
+.ben-lst li { margin-bottom: 12px; padding: 10px 15px; background: #16213e; border-radius: 8px; }
+.ben-lst li strong { color: #e94560; }
+/* 
+   About Section
+    */
+.about { padding: 70px 0; background: #16213e; }
+.about h2, .proj h2, .cont h2 { font-size: 2.2rem; text-align: center; margin-bottom: 30px; }
+.bio { font-size: 1.05rem; max-width: 750px; margin: 0 auto; text-align: center; line-height: 1.7; }
+/* 
+   Projects Section
+    */
+.proj { padding: 70px 0; background: #1a1a2e; }
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.proj-card {
+    background: #16213e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+.proj-card h3 { font-size: 1.35rem; margin-bottom: 12px; }
+.proj-card p { font-size: 0.95rem; margin-bottom: 18px; line-height: 1.5; }
+.proj-links { display: flex; gap: 12px; }
+.btn {
+    display: inline-block;
+    padding: 9px 18px;
+    background: #e94560;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+.btn-sec { background: #0f3460; }
+/* 
+   Contact Section
+    */
+.cont { padding: 70px 0; background: #16213e; }
+.cont-form { max-width: 550px; margin: 0 auto; }
+.frm-grp { margin-bottom: 20px; }
+.frm-grp label { display: block; font-weight: 500; margin-bottom: 7px; }
+.frm-grp input,
+.frm-grp textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #0f3460;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #1a1a2e;
+    color: #eee;
+}
+.frm-grp input:focus,
+.frm-grp textarea:focus {
+    outline: none;
+    border-color: #e94560;
+}
+.btn-sub {
+    width: 100%;
+    padding: 14px;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* 
+   Footer
+    */
+.ftr {
+    background: #0f3460;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+}
+.soc-lk {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+.soc-lk a { 
+    color: #fff; text-decoration: none; 
+}
+.ftr p { 
+    font-size: 0.85rem; opacity: 0.8;
+ }
+.datetime {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: #e94560;
+}
+/* 
+   Responsive
+    */
+@media (max-width: 768px) {
+    .hdr .name { font-size: 2rem; }
+    .nav-lst { flex-direction: column; gap: 0; }
+    .nav-lst a { padding: 14px; text-align: center; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .hero h2, .about h2, .proj h2, .cont h2 { font-size: 1.8rem; }
+}
+@media (max-width: 480px) {
+    .hdr { padding: 40px 0; }
+    .hdr .name { font-size: 1.7rem; }
+    .hero { padding: 40px 0; }
+    .hero h2, .about h2, .proj h2, .cont h2 { font-size: 1.5rem; }
+    .proj-card { padding: 20px; }
+    .proj-links { flex-direction: column; }
+}
